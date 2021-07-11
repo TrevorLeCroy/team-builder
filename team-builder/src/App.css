@@ -1,0 +1,22 @@
+.member-list {
+  margin: 0px auto;
+  margin-top: 10px;
+  display: flex;
+
+  flex-flow: column;
+  align-items: center;
+}
+
+.member-card {
+  text-align: center;
+  width: 20rem;
+  border-radius: 10px;
+  border: 2px solid gray;
+  margin-bottom: 5px;
+}
+
+.form-holder {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
