@@ -7,12 +7,14 @@ const baseMembers = [
   {
     'name'    : 'Danny',
     'id'      : 0,
+    'role'    : 'Back End Developer',
     'location': 'Salt Lake City US',
     'email'   : 'danny@email.com'
   },
   {
     'name'    : 'Corbin',
     'id'      : 1,
+    'role'    : 'Full Stack Developer',
     'location': 'Atlanta US',
     'email'   : 'corbin@email.com'
   }
@@ -27,7 +29,7 @@ function App() {
   const inputHandler = event => {
     const member = {
       ...newMember,
-      'email': `${newMember.name}@email.com`,
+      'email': `${newMember.name.toLowerCase()}@email.com`,
       [event.target.name]: event.target.value
     }
     setNewMember(member);
@@ -45,7 +47,7 @@ function App() {
         {team.map(member => {
           return (
             <div className='member-card' key={member.id}>
-              <h2> {member.name} </h2>
+              <h2> {member.name} the {member.role} </h2>
               <h3> {member.email} </h3>
               <p> {member.location} </p>
             </div>
