@@ -2,11 +2,20 @@ import React from 'react';
 
 const TeamForm = props => {
     return (
-        <div>
-            <input onChange={props.inputHandler} type='text' placeHolder='Team Member Name' name='name'/>
-            <input onChange={props.inputHandler} type='text' placeHolder='Team Member Location' name='location'/>
+        <form onSubmit={props.submitHandler}>
+            <input onChange={props.inputHandler} 
+             type='text' 
+             placeHolder='Team Member Name' 
+             name='name'
+             value={props.newMember.name}
+             />
+            <input onChange={props.inputHandler} 
+             type='text' 
+             placeHolder='Team Member Location' 
+             name='location'
+             value={props.newMember.location}/>
             <button> Submit </button>
-        </div>  
+        </form>  
     );
 }
 
